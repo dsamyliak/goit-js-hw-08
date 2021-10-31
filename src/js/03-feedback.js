@@ -12,9 +12,7 @@ if (savedFormData !== null) {
 feedbackForm.addEventListener("input", throttle(event => {
 
     const formData = { email: `${feedbackForm["email"].value}`, message: `${feedbackForm["message"].value}` };
-    // console.log(formData);
     const formDataJSON = JSON.stringify(formData);
-    // console.log(formDataJSON);
 
     localStorage.setItem("feedback-form-state", formDataJSON);
 
